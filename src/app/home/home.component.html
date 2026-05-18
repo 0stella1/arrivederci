@@ -1,0 +1,26 @@
+
+<section>
+  <form>
+    <input type="text" placeholder="Filter by city" />
+    <button class="primary" type="button">Search</button>
+  </form>
+</section>
+
+<!---->
+<section>
+    <section class="results">
+      <!-- tra parentesi quadre è attributo, tra doppi apici è variabile creata
+      <app-housing-location [housingLocationList]="housingLocationList"  />-->
+      
+<!-- <app-housing-location [housingLocation]="housingLocationList[0]" />
+ <app-housing-location [housingLocation]="housingLocationList[1]" />
+ <app-housing-location [housingLocation]="housingLocationList[2]" />-->
+
+ <!--oppure si potrebbe fare :
+    @for (casa of housingLocationList; track $index) {
+        <app-housing-location [housingLocation]="casa" />
+      }-->
+       @for (housingLocation of housingLocationList; track $index) {
+        <app-housing-location [housingLocation]="housingLocation" />
+      }
+    </section>
